@@ -27,7 +27,7 @@ export default function Footer() {
       <Text sx={styles.footer.copyright}>
         All right reserved - Design & Developed by
         <Link path="https://www.linkedin.com/in/iamphanisairam/" target="_blank">
-          ISO-SJSU (Phani Munipalli)
+          ISO-SJSU
         </Link>
       </Text>
     </footer>
