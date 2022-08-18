@@ -24,15 +24,12 @@ export default [
     label: 'Our Team',
   },
   {
-    path: '',
-    label: 'Connect',
+    path: 'feedback',
+    label: 'Feedback',
   },
   {
     path: 'faq',
     label: 'FAQs',
   },
-  // {
-  //   path: 'pricing',
-  //   label: 'Travel Checklist',
-  // }
+  
 ];

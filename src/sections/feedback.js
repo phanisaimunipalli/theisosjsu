@@ -9,46 +9,47 @@ import Avatar1 from 'assets/testimonial/avatar1.png';
 import Avatar2 from 'assets/testimonial/avatar2.png';
 import Avatar3 from 'assets/testimonial/avatar3.png';
 import Avatar4 from 'assets/testimonial/avatar4.png';
+import PatternBG from 'assets/patternBG.png';
 
 const data = [
   {
     id: 1,
-    title: 'Software Engineering',
+    title: 'President',
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar1,
-    name: 'Murali Monish',
-    designation: 'murali.monish@sjsu.edu',
+    name: 'Denny Hilguston',
+    designation: '@denny.hil',
     review: 4,
   },
   {
     id: 2,
-    title: 'Electrical Engineering',
+    title: 'Vice President',
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar2,
-    name: 'Ashish Nayikidi',
-    designation: 'ashish@sjsu.edu',
+    name: 'Denny Hilguston',
+    designation: '@denny.hil',
     review: 5,
   },
   {
     id: 3,
-    title: 'Arts & Science',
+    title: 'Finance Chairman',
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar3,
-    name: 'Phani Sai',
-    designation: 'phani@sjsu.edu',
+    name: 'Denny Hilguston',
+    designation: '@denny.hil',
     review: 5,
   },
   {
     id: 4,
-    title: 'Business School',
+    title: 'Chief Coordinator - Events',
     description:
       'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
     avatar: Avatar4,
-    name: 'Pavan Nageswar Reddy',
-    designation: 'pavan@sjsu.edu',
+    name: 'Denny Hilguston',
+    designation: '@denny.hil',
     review: 4,
   },
 ];
@@ -76,63 +77,27 @@ const responsive = {
   },
 };
 
-export default function TestimonialCard() {
+export default function FeedbackCard() {
   return (
-    <section id="testimonial" sx={{ variant: 'section.testimonial' }}>
+    <section id="feedback" sx={{ variant: 'section.testimonial'  }}>
       <Container>
-        <SectionHeader slogan="ISO-SJSU's" title="Graduate Student Advisors For You (Coming Soon)" />
+        <SectionHeader slogan="Feedback" title="Your Voice Matters" />
       </Container>
-      <Box sx={styles.carouselWrapper}>
-        <Carousel
-          additionalTransfrom={0}
-          arrows={false}
-          autoPlaySpeed={3000}
-          centerMode={false}
-          className=""
-          containerClass="carousel-container"
-          customButtonGroup={<ButtonGroup />}
-          dotListClass=""
-          draggable
-          focusOnSelect={false}
-          infinite={true}
-          itemClass=""
-          keyBoardControl
-          minimumTouchDrag={80}
-          renderButtonGroupOutside
-          renderDotsOutside={false}
-          responsive={responsive}
-          showDots={false}
-          sliderClass=""
-          slidesToSlide={1}
-        >
-          {data.map((item) => (
-            <Box sx={styles.reviewCard} key={`testimonial--key${item.id}`}>
-              {/* <Rating rating={item.review} /> */}
-              <Heading as="h3" sx={styles.title}>
-                {item.title}
-              </Heading>
-              <Text sx={styles.description}>{item.description}</Text>
-              <div className="card-footer">
-                <div className="image">
-                  <Image src={item.avatar} alt="Client Image" />
-                </div>
-                <div className="reviewer-info">
-                  <Heading as="h4" sx={styles.heading}>
-                    {item.name}
-                  </Heading>
-                  <Text sx={styles.designation}>{item.designation}</Text>
-                </div>
-              </div>
-            </Box>
-          ))}
-        </Carousel>
-      </Box>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgaEFlYV9NnKmgfOmJQakFKJtKILjikFm-oWmMHqGBF3NTpA/viewform?embedded=true" width="1500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   );
 }
 
 const styles = {
   carouselWrapper: {
+    backgroundColor: 'primary',
+      backgroundImage: `url(${PatternBG})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: 'center center',
+      backgroundSize: 'cover',
+      py: [8, null, 9, null, null, 10],
+      
+    
     display: 'flex',
     justifyContent: 'flex-end',
     flexDirection: 'column',
@@ -229,10 +194,10 @@ const styles = {
     },
   },
   title: {
-    fontSize: [2, 4],
+    fontSize: [1, 5],
     fontWeight: 700,
     mb: [3, null, null, '22px'],
-    color: '#0055A2',
+    color: 'text',
     lineHeight: 1.6,
   },
   description: {

@@ -15,6 +15,7 @@ import SecurePayment from 'sections/secure-payment';
 import Package from 'sections/package';
 import Faq from 'sections/faq';
 import OurTeam from 'sections/ourteam';
+import Feedback from 'sections/feedback';
 
 export default function IndexPage() {
   return (
@@ -28,10 +29,11 @@ export default function IndexPage() {
           <Feature />
           {/* <PartnerSection /> */}
           <WorkFlow />
-          <AppointmentCard />
+          {/* <AppointmentCard /> */}
           {/* <SecurePayment /> */}
           {/* <Package /> */}
           <OurTeam/>
+          <Feedback/>
           <Faq />
         </Layout>
       </StickyProvider>

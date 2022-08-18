@@ -12,7 +12,7 @@ const data = [
     id: 1,
     title: 'Choose Your Favourite Advisor',
     text:
-      'You can check out our Grad advisors availability or a follow-up connect with same advisor again.',
+      'We have a diverse group of Grad Student Advisors who are ready to help you in this journey.',
   },
   {
     id: 2,
@@ -39,8 +39,8 @@ export default function WorkFlow() {
     <section sx={styles.workflow} id="testimonial">
       <Container>
         <SectionHeader
-          slogan="Clear all your doubts!"
-          title="Connect with Graduate Advisors"
+          slogan="Coming Soon!"
+          title="Connect with Graduate Advisors "
           isWhite={true}
         />
 
