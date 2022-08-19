@@ -85,7 +85,7 @@ export default function FeedbackCard() {
       </Container>
       <Box sx={styles.carouselWrapper}>
             {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgaEFlYV9NnKmgfOmJQakFKJtKILjikFm-oWmMHqGBF3NTpA/viewform?embedded=true" width="1500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
-      <iframe frameborder="0" width="800" height="800" textAlign="center" src="https://s.surveyplanet.com/62fed271ce16007705a794aa" frameborder="0"></iframe>
+      <iframe frameborder="0" width="800" height="800"  src="https://s.surveyplanet.com/62fed271ce16007705a794aa" frameborder="0"></iframe>
       </Box>
 
     </section>

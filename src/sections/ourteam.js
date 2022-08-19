@@ -5,10 +5,14 @@ import Rating from 'components/rating';
 import ButtonGroup from 'components/button-group';
 import Carousel from 'react-multi-carousel';
 
-import Avatar1 from 'assets/testimonial/avatar1.png';
-import Avatar2 from 'assets/testimonial/avatar2.png';
-import Avatar3 from 'assets/testimonial/avatar3.png';
-import Avatar4 from 'assets/testimonial/avatar4.png';
+import Avatar1 from 'assets/team/president.jpg';
+import Avatar2 from 'assets/team/vicepresident.jpg';
+import Avatar3 from 'assets/team/vpalumni.jpg';
+import Avatar4 from 'assets/team/vpevents.jpg';
+import Avatar5 from 'assets/team/vpfinance.jpg';
+import Avatar6 from 'assets/team/vpsocial.jpg';
+// import Avatar4 from 'assets/team/vpevents';
+// import Avatar4 from 'assets/team/vpevents';
 import PatternBG from 'assets/patternBG.png';
 
 const data = [
@@ -16,41 +20,61 @@ const data = [
     id: 1,
     title: 'President',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
+      '',
     avatar: Avatar1,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
+    name: 'Nithin Reddy Govindugari',
+    department: 'Masters in Electrical Engineering',
     review: 4,
   },
   {
     id: 2,
     title: 'Vice President',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
+      '',
     avatar: Avatar2,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
+    name: 'Sujan Rao Chikkela',
+    department: 'Masters in Software Engineering',
     review: 5,
   },
   {
     id: 3,
-    title: 'Finance Chairman',
+    title: 'VP of Social Media',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar3,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
-    review: 5,
+      '',
+    avatar: Avatar6,
+    name: 'Rashmeet Kaur Bagga',
+    department: 'Bachelors in Computer Engineering',
+    review: 4,
   },
   {
     id: 4,
-    title: 'Chief Coordinator - Events',
+    title: 'VP of Events',
     description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
+      '',
     avatar: Avatar4,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
+    name: 'Sathvick Reddy Narahari',
+    department: 'Masters in Artificial Intelligence',
     review: 4,
+  },
+  {
+    id: 5,
+    title: 'VP of Finance',
+    description:
+      '',
+    avatar: Avatar5,
+    name: 'Het Tikawala',
+    department: 'Bachelors in Management Information Systems',
+    review: 5,
+  },
+  {
+    id: 6,
+    title: 'VP of Alumni Relations',
+    description:
+      '',
+    avatar: Avatar3,
+    name: 'Ambika Puligilla',
+    department: 'Masters in Electrical Engineering',
+    review: 5,
   },
 ];
 
@@ -77,7 +101,7 @@ const responsive = {
   },
 };
 
-export default function TestimonialCard() {
+export default function OurTeamCard() {
   return (
     <section id="ourteam" sx={{ variant: 'section.testimonial'  }}>
       <Container>
@@ -121,7 +145,7 @@ export default function TestimonialCard() {
                   <Heading as="h4" sx={styles.heading}>
                     {item.name}
                   </Heading>
-                  <Text sx={styles.designation}>{item.designation}</Text>
+                  <Text sx={styles.department}>{item.department}</Text>
                 </div>
               </div>
             </Box>
@@ -186,7 +210,7 @@ const styles = {
       '35px 30px 40px 40px',
     ],
     bg: 'white',
-    textAlign: 'left',
+    textAlign: 'center',
     m: [
       '28px 5px 30px 5px',
       '28px 20px 30px 20px',
@@ -221,16 +245,16 @@ const styles = {
       },
     },
     '.card-footer': {
-      display: 'flex',
+      display: 'column',
       alignItems: 'center',
       marginTop: [5, null, null, '33px'],
       '.image': {
         flexShrink: 0,
         mr: [3, null, null, 4],
-        display: 'flex',
+        display: 'column',
         img: {
-          width: '55px',
-          height: '55px',
+          width: '200px',
+          height: '200px',
           borderRadius: '50%',
           objectFit: 'cover',
         },
@@ -251,16 +275,16 @@ const styles = {
     lineHeight: [1.85, null, 2],
   },
   heading: {
-    fontSize: [1, null, null, 2],
+    fontSize: [3, null, null, 4],
     fontWeight: 700,
     mb: '3px',
     color: 'text',
-    lineHeight: 1.3,
+    lineHeight: 1.5,
   },
-  designation: {
+  department: {
     color: '#25A0FF',
     fontWeight: '500',
-    fontSize: 1,
+    fontSize: 2,
     lineHeight: 1.4,
   },
 };
