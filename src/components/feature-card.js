@@ -1,11 +1,14 @@
 /** @jsx jsx */
 import { jsx, Image, Box, Heading, Text } from 'theme-ui';
+import { Link } from './link';
 
 export default function FeatureCard({
   src,
   altText = 'default alt text',
   title,
   text,
+  linktext,
+  link,
 }) {
   return (
     <Box sx={styles.card}>
@@ -14,6 +17,7 @@ export default function FeatureCard({
       <Box sx={styles.wrapper}>
         <Heading sx={styles.wrapper.title}>{title}</Heading>
         <Text sx={styles.wrapper.subTitle}>{text}</Text>
+        <Link sx={styles.wrapper.link} path={link}>{linktext}</Link>
       </Box>
     </Box>
   );
@@ -48,6 +52,15 @@ const styles = {
       fontSize: 1,
       fontWeight: 400,
       lineHeight: [1.85, null, 2],
+    },
+    link: {
+      fontSize: 1,
+      textAlign: 'center',
+      fontWeight: 500,
+      lineHeight: [1.85, null, 2],
+      color: 'white',
+      backgroundColor: '#0055A2',
+      textDecoration: 'none',
     },
   },
 };

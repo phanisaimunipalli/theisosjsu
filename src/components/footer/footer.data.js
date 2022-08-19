@@ -1,5 +1,30 @@
 export default [
   {
+    header: 'Academics',
+    items: [
+      {
+        path: 'https://www.sjsu.edu/engineering/',
+        label: 'Engineering',
+      },
+      {
+        path: 'https://www.sjsu.edu/classes/calendar/index.php',
+        label: 'Academic Calendar',
+      },
+      {
+        path: 'http://library.sjsu.edu/',
+        label: 'King Library',
+      },
+      {
+        path: 'https://www.sjsu.edu/visit/silicon-valley.php',
+        label: 'Silicon Valley',
+      },
+      {
+        path: 'https://www.sjsu.edu/research/',
+        label: 'Office of Research',
+      },
+    ],
+  },
+  {
     header: 'FAQs',
     items: [
       {
@@ -12,86 +37,50 @@ export default [
       },
       {
         path: 'https://www.sjsu.edu/isss/resources/hub/faq/',
-        label: 'Faculty "& Staff',
+        label: 'Faculty & Staff',
       },
       {
-        path: '/',
-        label: 'Copyright',
-      },
-      {
-        path: '/',
-        label: 'Popular Campaign',
-      },
+        path: 'https://www.sjsu.edu/healthadvisories/faq/index.php',
+        label: 'Health',
+      }
     ],
   },
   {
-    header: 'Our Information',
+    header: 'Social Media',
     items: [
       {
         path: '/',
-        label: 'Return Policy ',
+        label: 'Facebook',
       },
       {
         path: '/',
-        label: 'Privacy Policy',
+        label: 'Instagram',
       },
       {
         path: '/',
-        label: 'Terms & Conditions',
-      },
-      {
-        path: '/',
-        label: 'Site Map',
-      },
-      {
-        path: '/',
-        label: 'Store Hours',
+        label: 'Linkedin',
       },
     ],
   },
+  
   {
-    header: 'Majors & Programs',
+    header: 'Campus Life',
     items: [
       {
-        path: '/',
-        label: 'Press inquiries',
+        path: 'https://www.sjsu.edu/campus-life/health-and-wellness.php',
+        label: 'Health & Wellness',
       },
       {
-        path: '/',
-        label: 'Social media ',
+        path: 'https://www.sjsu.edu/campus-life/safety.php',
+        label: 'Safety',
       },
       {
-        path: '/',
-        label: 'directories',
+        path: 'https://www.sjsu.edu/sjsucares/',
+        label: 'SJSU Cares',
       },
       {
-        path: '/',
-        label: 'Images & B-roll',
-      },
-      {
-        path: '/',
-        label: 'Permissions',
-      },
-    ],
-  },
-  {
-    header: 'Admissions',
-    items: [
-      {
-        path: 'https://www.sjsu.edu/admissions/',
-        label: 'Application security',
-      },
-      {
-        path: '/',
-        label: 'Software principles',
-      },
-      {
-        path: '/',
-        label: 'Unwanted software policy',
-      },
-      {
-        path: '/',
-        label: 'Responsible supply chain',
+        path: 'https://www.sjsu.edu/campus-life/traditions.php',
+        label: 'Traditions',
       },
     ],
   },

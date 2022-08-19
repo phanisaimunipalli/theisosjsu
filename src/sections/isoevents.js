@@ -3,7 +3,8 @@ import { jsx } from 'theme-ui';
 import { Container, Grid } from 'theme-ui';
 import SectionHeader from 'components/section-header';
 import FeatureCard from 'components/feature-card.js';
-import Smart from 'assets/feature/smart.svg';
+import Calendar26 from 'assets/calendar26.svg';
+import Calendar from 'assets/calendar.svg';
 import Winner from 'assets/feature/winner.svg';
 import Cloud from 'assets/feature/cloud.svg';
 import Setting from 'assets/feature/setting.svg';
@@ -13,51 +14,52 @@ import Chat from 'assets/feature/chat.svg';
 const data = [
   {
     id: 1,
-    imgSrc: Smart,
-    altText: 'Smart',
-    title: 'Aug 19th - First Class',
-    text:
-      'Dont forget to enroll to all your classes and attend the first day of Fall 2022.',
+    imgSrc: Calendar26,
+    altText: 'parichay',
+    title: 'Parichay - Meet, Greet & Uniwind on Aug 26th, 2022',
+    text:'Get ready to attend your first event at SJSU and meet all your peers @Parichay 2022 (Meet, Greet & Unwind).',
+    linktext:'Register Now',
+    link: 'https://www.eventbrite.com/e/parichay-meet-greet-and-unwind-tickets-400974614867',
   },
   {
     id: 2,
-    imgSrc: Winner,
+    imgSrc: Calendar,
     altText: 'Performance',
-    title: 'Aug 25th - Krishnashtami',
+    title: 'September',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      'Watch This Space For Updates!',
   },
   {
     id: 3,
-    imgSrc: Cloud,
+    imgSrc: Calendar,
     altText: 'Content',
-    title: 'Sep 3rd - Holi',
+    title: 'October 2022',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      'Do you have any suggestions?',
   },
   {
     id: 4,
-    imgSrc: Setting,
+    imgSrc: Calendar,
     altText: 'Oct 1st - Duserra',
-    title: 'Oct 1st - Duserra',
+    title: 'November 2022',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      'Stay Tuned',
   },
   {
     id: 5,
-    imgSrc: Design,
-    altText: 'Oct 19th - Diwali',
-    title: 'Oct 19th - Diwali',
+    imgSrc: Calendar,
+    altText: 'December',
+    title: 'December',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      'Santa is Arriving...!!',
   },
   {
     id: 6,
-    imgSrc: Chat,
-    altText: 'Support',
-    title: 'Nov 27 - Thanksgiving',
+    imgSrc: Calendar,
+    altText: 'January',
+    title: 'January 2023',
     text:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.',
+      'Watch this space for updates!',
   },
 ];
 
@@ -78,6 +80,8 @@ export default function Feature() {
               alt={item.title}
               title={item.title}
               text={item.text}
+              linktext={item.linktext}
+              link={item.link}
             />
           ))}
         </Grid>

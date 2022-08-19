@@ -4,33 +4,34 @@ import { Container, Flex, Box, Heading, Text, Image, Button } from 'theme-ui';
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
 import { Link } from 'components/link';
+// import { Link } from 'theme-ui'
 import { FaPlayCircle } from 'react-icons/fa';
 import BannerBG from 'assets/bannerBg.png';
 // import BannerThumb from 'assets/banner-thumb.png';
 
 import BannerThumb from 'assets/spartanlogo.png'
-import client1 from 'assets/sponsor/facebook.svg';
-import client2 from 'assets/sponsor/instagram.svg';
-import client3 from 'assets/sponsor/linkedin.svg';
+import social1 from 'assets/sponsor/facebook.svg';
+import social2 from 'assets/sponsor/instagram.svg';
+import social3 from 'assets/sponsor/linkedin.svg';
 
 const data = [
   {
     id: 1,
     path: 'https://www.facebook.com/groups/isosjsu/',
-    image: client1,
+    image: social1,
     title: 'facebook',
   },
   {
     id: 2,
     path: 'https://www.instagram.com/iso.sjsu/?hl=en',
-    image: client2,
+    image: social2,
     title: 'instagram',
     target: '_blank'
   },
   {
     id: 3,
-    path: '#',
-    image: client3,
+    path: 'https://www.linkedin.com/company/indian-students-organization-sjsu/',
+    image: social3,
     title: 'linkedin',
   },
 ];
@@ -52,9 +53,9 @@ export default function Banner() {
             Indian Student Organization provides academic advising as well as social and cultural support to newly admitted students as well as currently enrolled students at San Jose State Univeristy. ISO-SJSU also arranges events like Cricket tournaments, Holi/Navratri/Diwali celebrations.
           </Text>
           <Flex>
-            <Button variant="whiteButton" aria-label="Get Started">
+            {/* <Button variant="whiteButton" aria-label="Get Started" path="feature">
               Get Started
-            </Button>
+            </Button> */}
             <>
               <ModalVideo
                 channel="youtube"
@@ -63,7 +64,7 @@ export default function Banner() {
                 onClose={() => setVideoOpen(false)}
               />
               <Button
-                variant="textButton"
+                variant="whiteButton"
                 aria-label="Watch Video"
                 onClick={handleClick}
               >
@@ -75,7 +76,7 @@ export default function Banner() {
             {/* <Text sx={styles.sponsorTitle}>Reach us at:</Text> */}
             <Box sx={styles.sponsorBox.sponsor}>
               {data.map((item, index) => (
-                <Link path={item.path} key={`client-key${index}`}>
+                <Link path={item.path} key={`social-key${index}`}>
                   <Image src={item.image} target={item.target} alt={item.title} />
                 </Link>
               ))}

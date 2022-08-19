@@ -5,9 +5,9 @@ import theme from 'theme';
 import SEO from 'components/seo';
 import Layout from 'components/layout';
 import Banner from 'sections/banner';
-import KeyFeature from 'sections/key-feature';
-import CoreFeature from 'sections/core-feature';
-import Feature from 'sections/feature';
+import KeyEvent from 'sections/key-event';
+import CoreEvent from 'sections/core-event';
+import Event from 'sections/isoevents';
 import PartnerSection from 'sections/partner';
 import WorkFlow from 'sections/workflow';
 import AppointmentCard from 'sections/appointment';
@@ -24,9 +24,9 @@ export default function IndexPage() {
         <Layout>
           <SEO title="ISO-SJSU" />
           <Banner />
-          <KeyFeature />
-          <CoreFeature />
-          <Feature />
+          <KeyEvent />
+          <CoreEvent />
+          <Event />
           {/* <PartnerSection /> */}
           <WorkFlow />
           {/* <AppointmentCard /> */}
