@@ -1,16 +1,15 @@
 /** @jsx jsx */
-import { jsx, Container, Heading, Text, Box, Image } from 'theme-ui';
-import SectionHeader from 'components/section-header';
-import Rating from 'components/rating';
-import ButtonGroup from 'components/button-group';
-import Carousel from 'react-multi-carousel';
-
-import Avatar1 from 'assets/testimonial/avatar1.png';
-import Avatar2 from 'assets/testimonial/avatar2.png';
-import Avatar3 from 'assets/testimonial/avatar3.png';
-import Avatar4 from 'assets/testimonial/avatar4.png';
-import PatternBG from 'assets/patternBG.png';
-
+import { jsx, Container, Heading, Text, Box, Image } from "theme-ui";
+import SectionHeader from "components/section-header";
+import Rating from "components/rating";
+import ButtonGroup from "components/button-group";
+import Carousel from "react-multi-carousel";
+import { Embed } from "theme-ui";
+import Avatar1 from "assets/testimonial/avatar1.png";
+import Avatar2 from "assets/testimonial/avatar2.png";
+import Avatar3 from "assets/testimonial/avatar3.png";
+import Avatar4 from "assets/testimonial/avatar4.png";
+import PatternBG from "assets/patternBG.png";
 
 const responsive = {
   desktop: {
@@ -37,41 +36,65 @@ const responsive = {
 
 export default function FeedbackCard() {
   return (
-    <section id="feedback" sx={{ variant: 'section.testimonial'  }}>
+    <section id="feedback" sx={{ variant: "section.testimonial" }}>
       <Container>
-        <SectionHeader slogan="Let us know what you think" title="Quick Feedback" />
+        <SectionHeader
+          slogan="Let us know what you think"
+          title="Quick Feedback"
+        />
       </Container>
       <Box sx={styles.carouselWrapper}>
-            {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgaEFlYV9NnKmgfOmJQakFKJtKILjikFm-oWmMHqGBF3NTpA/viewform?embedded=true" width="1500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
-      <iframe class="responsive-iframe" frameborder="0" width="500" height="500"  src="https://s.surveyplanet.com/62fed271ce16007705a794aa" ></iframe>
+        {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgaEFlYV9NnKmgfOmJQakFKJtKILjikFm-oWmMHqGBF3NTpA/viewform?embedded=true" width="1500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
+        {/* <iframe
+          frameborder="0"
+          width="500"
+          height="500"
+          src="https://s.surveyplanet.com/62fed271ce16007705a794aa"
+        ></iframe> */}
+        <Embed
+          sx={styles.feedback}
+          frameborder="0"
+          src="https://s.surveyplanet.com/62fed271ce16007705a794aa"
+        />
       </Box>
-
     </section>
   );
 }
 
 const styles = {
   carouselWrapper: {
-    backgroundColor: 'primary',
+    backgroundColor: "primary",
     backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
     py: [8, null, 9, null, null, 10],
-    display: 'flex',
-    justifyContent: 'flex-end',
-    flexDirection: 'column',
-    alignItems: 'center',
-    mt: '-35px',
-    px: '15px'
-},
-responsiveIframe: {
-  position: 'absolute',
-  top: '0',
-  left: '0',
-  bottom: '0',
-  right: '0',
-  width: '100%',
-  height: '100%',
-}
-}
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "column",
+    alignItems: "center",
+    mt: "-35px",
+    px: "15px",
+  },
+  // responsiveIframe: {
+  //   position: "absolute",
+  //   top: "0",
+  //   left: "0",
+  //   bottom: "0",
+  //   right: "0",
+  //   width: "100%",
+  //   height: "100%",
+  // },
+  feedback: {
+    position: "relative",
+    display: "flex",
+    justifyContent: "flex-end",
+    flexDirection: "column",
+    top: "0",
+    left: "0",
+    bottom: "0",
+    right: "0",
+    // width: "500px",
+    height: "100px",
+  },
+};
