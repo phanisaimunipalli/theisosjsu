@@ -51,8 +51,14 @@ export default function FeedbackCard() {
           height="500"
           src="https://s.surveyplanet.com/62fed271ce16007705a794aa"
         ></iframe> */}
+        <div sx={styles.container}>
+          <iframe
+            sx={styles.responsiveIframe}
+            frameborder="0"
+            src="https://s.surveyplanet.com/62fed271ce16007705a794aa"
+          ></iframe>
+        </div>
         <Embed
-          sx={styles.feedback}
           frameborder="0"
           src="https://s.surveyplanet.com/62fed271ce16007705a794aa"
         />
@@ -76,15 +82,6 @@ const styles = {
     mt: "-35px",
     px: "15px",
   },
-  // responsiveIframe: {
-  //   position: "absolute",
-  //   top: "0",
-  //   left: "0",
-  //   bottom: "0",
-  //   right: "0",
-  //   width: "100%",
-  //   height: "100%",
-  // },
   feedback: {
     position: "relative",
     display: "flex",
@@ -96,5 +93,23 @@ const styles = {
     right: "0",
     // width: "500px",
     height: "100px",
+  },
+
+  container: {
+    position: "relative",
+    width: "100%",
+    overflow: "hidden",
+    pt: "56.25%" /* 16:9 Aspect Ratio */,
+  },
+
+  responsiveIframe: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    bottom: "0",
+    right: "0",
+    width: "100%",
+    height: "100%",
+    border: "none",
   },
 };
