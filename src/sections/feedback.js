@@ -11,48 +11,6 @@ import Avatar3 from 'assets/testimonial/avatar3.png';
 import Avatar4 from 'assets/testimonial/avatar4.png';
 import PatternBG from 'assets/patternBG.png';
 
-const data = [
-  {
-    id: 1,
-    title: 'President',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar1,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
-    review: 4,
-  },
-  {
-    id: 2,
-    title: 'Vice President',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar2,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
-    review: 5,
-  },
-  {
-    id: 3,
-    title: 'Finance Chairman',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar3,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
-    review: 5,
-  },
-  {
-    id: 4,
-    title: 'Chief Coordinator - Events',
-    description:
-      'Get working experience to work with this amazing team & in future want to work together for bright future projects and also make deposit to freelancer.',
-    avatar: Avatar4,
-    name: 'Denny Hilguston',
-    designation: '@denny.hil',
-    review: 4,
-  },
-];
 
 const responsive = {
   desktop: {
@@ -85,7 +43,7 @@ export default function FeedbackCard() {
       </Container>
       <Box sx={styles.carouselWrapper}>
             {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdgaEFlYV9NnKmgfOmJQakFKJtKILjikFm-oWmMHqGBF3NTpA/viewform?embedded=true" width="1500" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> */}
-      <iframe frameborder="0" width="500" height="500"  src="https://s.surveyplanet.com/62fed271ce16007705a794aa" frameborder="0"></iframe>
+      <iframe class="responsive-iframe" frameborder="0" width="500" height="500"  src="https://s.surveyplanet.com/62fed271ce16007705a794aa" ></iframe>
       </Box>
 
     </section>
@@ -95,18 +53,25 @@ export default function FeedbackCard() {
 const styles = {
   carouselWrapper: {
     backgroundColor: 'primary',
-      backgroundImage: `url(${PatternBG})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundPosition: 'center center',
-      backgroundSize: 'cover',
-      py: [8, null, 9, null, null, 10],
-      
-    
+    backgroundImage: `url(${PatternBG})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    py: [8, null, 9, null, null, 10],
     display: 'flex',
     justifyContent: 'flex-end',
     flexDirection: 'column',
     alignItems: 'center',
     mt: '-35px',
     px: '15px'
+},
+responsiveIframe: {
+  position: 'absolute',
+  top: '0',
+  left: '0',
+  bottom: '0',
+  right: '0',
+  width: '100%',
+  height: '100%',
 }
 }
